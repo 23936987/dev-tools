@@ -1,11 +1,13 @@
-package com.bdp.utils;
-
-/**
- *  常量类
- * <p>完成日期：2018年04月04日</p>
+/***
  *
- * @version 1.0
+ * @ClassName: Constant
+ * @Description: 常量类
+ * @Auther: yecao
+ * @Date: 2019/9/21 14:24
+ * @version : 1.0
  */
+package com.bdp.helper;
+
 public class Constant {
 
     public final static  String DEFAULT_DATETIME_FORMART = "yyyy-MM-dd HH:mm:ss";

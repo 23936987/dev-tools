@@ -1,5 +1,12 @@
-package com.bdp.utils;
-
+/***
+ *
+ * @ClassName: HttpHelper
+ * @Description: Http工具类
+ * @Auther: yecao
+ * @Date: 2019/9/21 14:24
+ * @version : 1.0
+ */
+package com.bdp.helper;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -24,9 +31,6 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -36,7 +40,6 @@ import java.util.List;
 import java.util.Map;
 
 public class HttpHelper {
-    private static Logger logger = LoggerFactory.getLogger(HttpHelper.class);
     private static String encoding = "utf-8";
     private RequestConfig requestConfig = RequestConfig.custom()
             .setSocketTimeout(15000)
@@ -343,7 +346,6 @@ public class HttpHelper {
             return sendHttpPost(httpPost);
         }catch(Exception e){
             e.printStackTrace();
-            logger.error("与[" + reqURL + "]通信过程中发生异常,堆栈信息如下", e);
         }
         return null;
     }
