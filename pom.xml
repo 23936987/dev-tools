@@ -6,7 +6,7 @@
 
   <groupId>com.bdp</groupId>
   <artifactId>dev-tools</artifactId>
-  <version>1.2</version>  
+  <version>1.2</version>
   <name>dev-tools</name>
   <url>http://www.example.com</url> 
   <properties>
