@@ -1,16 +1,18 @@
-package com.bdp.utils;
+/***
+ *
+ * @ClassName: DateHelper
+ * @Description: 日期工具类
+ * @Auther: yecao
+ * @Date: 2019/9/21 14:24
+ * @version : 1.0
+ */
+package com.bdp.helper;
 
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- *  日期工具类
- * <p>完成日期：2016年10月21日</p>
- *
- * @version 1.0
- */
 public class DateHelper {
 	/**
 	 * 默认时间格式化格式
@@ -38,7 +40,7 @@ public class DateHelper {
 	public static String dateToStr(Date date, String format)
 	{
 		try {
-			if (StringHelper.isNotEmpty(format)) {
+			if (BaseHelper.isNotEmpty(format)) {
 				return new SimpleDateFormat(format).format(date);
 			}
 			return new SimpleDateFormat(Constant.DEFAULT_DATETIME_FORMART).format(date);
@@ -96,7 +98,7 @@ public class DateHelper {
 	 * 毫秒转化时分秒毫秒
 	 */
 	public static String formatTime(Long ms) {
-		if(StringHelper.isEmpty(ms)){
+		if(BaseHelper.isEmpty(ms)){
 			return "";
 		}
 		Integer ss = 1000;

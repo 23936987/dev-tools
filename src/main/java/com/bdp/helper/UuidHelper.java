@@ -1,15 +1,16 @@
-package com.bdp.utils;
+/***
+ *
+ * @ClassName: UuidHelper
+ * @Description: uuid工具类
+ * @Auther: yecao
+ * @Date: 2019/9/21 14:24
+ * @version : 1.0
+ */
+package com.bdp.helper;
 
 import java.security.SecureRandom;
 import java.util.UUID;
 
-/**
- *
- * uuid工具类
- * <p>完成日期：2016年10月21日</p>
- *
- * @version 1.0
- */
 public class UuidHelper {
     /**
      * 无参构造方法
