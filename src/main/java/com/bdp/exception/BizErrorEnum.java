@@ -10,8 +10,8 @@ package com.bdp.exception;
  */
 
 public enum BizErrorEnum implements ErrorEnum {
-    OK("0", "正常"),
-    UNKONW("-1", "其它异常");
+    OK("0", "success"),
+    FAILURE("-1", "fail");
 
     private String errorCode;
     private String errorMsg;

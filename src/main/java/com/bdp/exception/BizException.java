@@ -8,28 +8,26 @@ package com.bdp.exception;
  * @Date: 2019/9/21 14:45
  * @version : 1.0
  */
-
 public class BizException extends Exception{
+    private  static  ErrorEnum errorEnum = BizErrorEnum.FAILURE;
     private String errorCode;
-    private String errorMsg;
     public BizException(){
-        ErrorEnum errorEnum = BizErrorEnum.UNKONW;
+        super(errorEnum.getErrorMsg());
         this.errorCode = errorEnum.getErrorCode();
-        this.errorMsg = errorEnum.getErrorMsg();
+
     }
     public BizException(String errorMsg){
-        ErrorEnum errorEnum = BizErrorEnum.UNKONW;
+        super(errorMsg);
         this.errorCode = errorEnum.getErrorCode();
-        this.errorMsg = errorMsg;
     }
     public BizException(ErrorEnum errorEnum) {
+        super(errorEnum.getErrorMsg());
         this.errorCode = errorEnum.getErrorCode();
-        this.errorMsg = errorEnum.getErrorMsg();
     }
 
     public BizException(ErrorEnum errorEnum, String errorMsg) {
+        super(errorEnum.getErrorMsg());
         this.errorCode = errorEnum.getErrorCode();
-        this.errorMsg = errorMsg;
     }
 
     public String getErrorCode() {
@@ -38,14 +36,6 @@ public class BizException extends Exception{
 
     public void setErrorCode(String errorCode) {
         this.errorCode = errorCode;
-    }
-
-    public String getErrorMsg() {
-        return errorMsg;
-    }
-
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
     }
 }
 
