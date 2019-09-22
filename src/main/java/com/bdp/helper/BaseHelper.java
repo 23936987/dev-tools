@@ -8,8 +8,7 @@
  */
 package com.bdp.helper;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class BaseHelper {
     /**
@@ -57,5 +56,14 @@ public class BaseHelper {
         }
 
         return result;
+    }
+    public static List<Object> string2list(String str) {
+        List<Object> list = new ArrayList<>();
+        if(str != null) {
+            String[] arr = str.split(",");
+            list = Arrays.asList();
+        }
+
+        return list;
     }
 }
